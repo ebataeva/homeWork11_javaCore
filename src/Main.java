@@ -17,9 +17,9 @@ public class Main {
         box1.putFruitToBox(apple, 10);
         box2.putFruitToBox(orange, 15);
         box3.putFruitToBox(apple, 2);
-
-        box1.getWeight();
-        System.out.println(Box.compare(box1, box3));
+        box3.sendToCard(box1);
+        System.out.println("вес 3 = "+box3.getWeight());
+        System.out.println("вес 1 = "+box1.getWeight());
         System.out.println(box1.compare(box2));
 
     }

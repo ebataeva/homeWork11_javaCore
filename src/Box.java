@@ -14,6 +14,8 @@ public class Box {
 
     }
 
+
+
     public Float getWeight() {
         Float sum = 0.0f;
         for (int i = 0; i < list.size(); i++) {
@@ -27,16 +29,33 @@ public class Box {
         return list;
     }
 
+    /*
     public static Boolean compare(Box box1, Box box2) {
-        if (box1.getList().get(0) == (box2.getList().get(0)) && box1.getList().size()==box2.getList().size()) {
+        if (box1.getList().get(0) == (box2.getList().get(0)) && box1.getList().size() == box2.getList().size()) {
+            return true;
+        }
+        return false;
+        }
+    */
+    public Boolean compare(Box box) {
+        if (this.getList().get(0) == (box.getList().get(0)) && this.getList().size() == box.getList().size()) {
             return true;
         }
         return false;
     }
-    public  Boolean compare(Box box) {
-        if (this.getList().get(0) == (box.getList().get(0)) && this.getList().size()==box.getList().size()) {
-            return true;
+
+    public void sendToCard(Box box) {
+        if (this.getList().get(0) == (box.getList().get(0))) {
+            for (Fruit f : this.getList()) {
+                box.getList().add(f);
+            }
+            for (int i = 0; i < this.getList().size() ; i++) {
+                this.getList().clear();
+            }
+
+
+        }else{
+            System.out.println("нельзя так делать. типы не соответствуют");
         }
-        return false;
     }
 }
