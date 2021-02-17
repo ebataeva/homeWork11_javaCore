@@ -13,10 +13,14 @@ public class Main {
         Fruit orange = new Orange();
         Box box1 = new Box();
         Box box2 = new Box();
+        Box box3 = new Box();
         box1.putFruitToBox(apple, 10);
         box2.putFruitToBox(orange, 15);
+        box3.putFruitToBox(apple, 2);
 
         box1.getWeight();
+        System.out.println(Box.compare(box1, box3));
+        System.out.println(box1.compare(box2));
 
     }
 
